@@ -39,7 +39,8 @@ body {
 
 /* ---- Header bar (name + title) ---- */
 .site-header {
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-text);
+  color: #ffffff;
   text-align: center;
 }
 .site-header .wrap {
@@ -51,24 +52,28 @@ body {
   margin-bottom: 0.3rem;
 }
 .site-header h1 a {
-  color: var(--color-text);
+  color: #ffffff;
   text-decoration: none;
 }
 .site-header .site-title {
   font-style: italic;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.72);
   margin-bottom: var(--space-2);
 }
 .site-header .site-title:last-child { margin-bottom: 0; }
 .site-header nav a {
-  color: var(--color-text);
+  color: #ffffff;
   text-decoration: none;
   margin: 0 0.7rem;
   font-size: 0.9rem;
 }
-.site-header nav a:hover { color: var(--color-muted); }
+.site-header nav a:hover { color: rgba(255, 255, 255, 0.72); }
 
-/* ---- Typography ---- */
+/* ---- Body column: centered ---- */
+main.wrap, footer .wrap {
+  text-align: center;
+}
+main.wrap section { margin-bottom: var(--space-3); }
 h1, h2, h3 {
   font-family: var(--font-display);
   line-height: 1.2;
