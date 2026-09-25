@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Base tokens — edit these to make the site yours.
+   ========================================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #5c5c5c;
+  --color-accent: #1a1a1a;
+  --color-border: #e2e2e2;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: var(--font-body);
+
+  --max-width: 720px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-2);
+}
+
+/* ---- Nav ---- */
+nav.site-nav {
+  border-bottom: 1px solid var(--color-border);
+}
+nav.site-nav .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+nav.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin-left: var(--space-3);
+  font-size: 0.95rem;
+}
+nav.site-nav a:first-child { margin-left: 0; font-weight: 600; }
+nav.site-nav a:hover { color: var(--color-muted); }
+
+/* ---- Typography ---- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  margin-top: 0;
+}
+h1 { font-size: 2rem; margin-bottom: var(--space-1); }
+h2 { font-size: 1.4rem; margin-top: var(--space-4); margin-bottom: var(--space-2); }
+p { margin-top: 0; margin-bottom: var(--space-2); }
+a { color: var(--color-accent); }
+.muted { color: var(--color-muted); }
+
+/* ---- Lists (publications, posts, pieces) ---- */
+.entry-list { list-style: none; margin: 0; padding: 0; }
+.entry-list li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.entry-list li:first-child { padding-top: 0; }
+.entry-title { font-weight: 600; }
+.entry-meta { font-size: 0.9rem; color: var(--color-muted); }
+
+/* ---- Gallery (art / creative work) ---- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.gallery figcaption {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+}
+
+/* ---- Footer ---- */
+footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-4);
+}
+footer .wrap {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---- Focus visibility ---- */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
