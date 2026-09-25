@@ -3,19 +3,19 @@
    ========================================================================== */
 :root {
   --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-muted: #5c5c5c;
-  --color-accent: #1a1a1a;
-  --color-border: #e2e2e2;
+  --color-text: #161513;
+  --color-muted: #7d7b76;
+  --color-accent: #161513;
+  --color-border: #e7e5e0;
 
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-display: var(--font-body);
+  --font-body: 'Newsreader', Georgia, "Times New Roman", serif;
+  --font-display: 'Newsreader', Georgia, "Times New Roman", serif;
 
-  --max-width: 720px;
+  --max-width: 640px;
   --space-1: 0.5rem;
-  --space-2: 1rem;
+  --space-2: 1.1rem;
   --space-3: 2rem;
-  --space-4: 4rem;
+  --space-4: 4.5rem;
 }
 
 * { box-sizing: border-box; }
@@ -27,8 +27,8 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 19px;
+  line-height: 1.65;
 }
 
 .wrap {
@@ -37,25 +37,36 @@ body {
   padding: var(--space-3) var(--space-2);
 }
 
-/* ---- Nav ---- */
-nav.site-nav {
+/* ---- Header bar (name + title) ---- */
+.site-header {
   border-bottom: 1px solid var(--color-border);
+  text-align: center;
 }
-nav.site-nav .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
+.site-header .wrap {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
 }
-nav.site-nav a {
+.site-header h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.3rem;
+}
+.site-header h1 a {
   color: var(--color-text);
   text-decoration: none;
-  margin-left: var(--space-3);
-  font-size: 0.95rem;
 }
-nav.site-nav a:first-child { margin-left: 0; font-weight: 600; }
-nav.site-nav a:hover { color: var(--color-muted); }
+.site-header .site-title {
+  font-style: italic;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+.site-header .site-title:last-child { margin-bottom: 0; }
+.site-header nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin: 0 0.7rem;
+  font-size: 0.9rem;
+}
+.site-header nav a:hover { color: var(--color-muted); }
 
 /* ---- Typography ---- */
 h1, h2, h3 {
@@ -63,10 +74,17 @@ h1, h2, h3 {
   line-height: 1.2;
   margin-top: 0;
 }
-h1 { font-size: 2rem; margin-bottom: var(--space-1); }
-h2 { font-size: 1.4rem; margin-top: var(--space-4); margin-bottom: var(--space-2); }
+h1 { font-size: 2.3rem; margin-bottom: var(--space-1); font-weight: 600; }
+h2 {
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
 p { margin-top: 0; margin-bottom: var(--space-2); }
-a { color: var(--color-accent); }
+a { color: var(--color-accent); text-underline-offset: 3px; }
 .muted { color: var(--color-muted); }
 
 /* ---- Lists (publications, posts, pieces) ---- */
@@ -76,8 +94,8 @@ a { color: var(--color-accent); }
   border-bottom: 1px solid var(--color-border);
 }
 .entry-list li:first-child { padding-top: 0; }
-.entry-title { font-weight: 600; }
-.entry-meta { font-size: 0.9rem; color: var(--color-muted); }
+.entry-title { font-weight: 400; }
+.entry-meta { font-size: 0.9rem; color: var(--color-muted); font-family: var(--font-body); }
 
 /* ---- Gallery (art / creative work) ---- */
 .gallery {
