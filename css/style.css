@@ -45,16 +45,17 @@ body {
 }
 .site-header .wrap {
   max-width: none;
-  padding: 2.5rem 1.5rem;
+  padding: 0.5rem 0.5rem;
 }
 .site-header h1 {
   margin: 0;
   font-family: 'Anton', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
   line-height: 1;
-  font-size: clamp(2.2rem, 9vw, 5.5rem);
+  font-size: 14.5vw;
+  white-space: nowrap;
 }
 .site-header h1 a {
   color: #ffffff;
