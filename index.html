@@ -6,7 +6,7 @@
 <title>Ilem Leisher</title>
 <meta name="description" content="Portfolio">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,19 +14,40 @@
 <header class="site-header">
   <div class="wrap">
     <h1><a href="index.html">Ilem Leisher</a></h1>
-    <nav>
-      <a href="index.html">Research</a>
-    </nav>
   </div>
 </header>
+
+<nav class="sub-nav">
+  <div class="nav-item">
+    <a href="index.html">The Small Scale</a>
+    <ul class="dropdown">
+      <li><a href="index.html">Example — replace with a real link</a></li>
+      <li><a href="index.html">Example — replace with a real link</a></li>
+    </ul>
+  </div>
+  <div class="nav-item">
+    <a href="index.html">Everything In Between</a>
+    <ul class="dropdown">
+      <li><a href="index.html">Example — replace with a real link</a></li>
+      <li><a href="index.html">Example — replace with a real link</a></li>
+    </ul>
+  </div>
+  <div class="nav-item">
+    <a href="index.html">The Large Scale</a>
+    <ul class="dropdown">
+      <li><a href="index.html">Example — replace with a real link</a></li>
+      <li><a href="index.html">Example — replace with a real link</a></li>
+    </ul>
+  </div>
+</nav>
 
 <main class="wrap">
 
   <!-- ===== Intro ===== -->
   <section>
-    <p class="muted">Hello!</p>
+    <p class="muted">"You are <a href="index.html">everywhere</a>, and live <a href="index.html">nowhere</a>"</p>
     <p>
-      Hello.
+      Personal Growth Addict, Recovering Athlete, Structure Enjoyer, Existence Examiner, Experience Seeker
     </p>
     <p>
       <a href="mailto:ilemleisher@gmail.com">ilemleisher@gmail.com</a> ·
@@ -40,6 +61,45 @@
     &copy; 2026 Ilem Leisher
   </div>
 </footer>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('.sub-nav .nav-item');
+  items.forEach(function (item) {
+    var trigger = item.querySelector(':scope > a');
+    trigger.setAttribute('aria-haspopup', 'true');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      var willOpen = !item.classList.contains('is-open');
+      items.forEach(function (other) {
+        other.classList.remove('is-open');
+        other.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+      });
+      if (willOpen) {
+        item.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sub-nav')) {
+      items.forEach(function (item) {
+        item.classList.remove('is-open');
+        item.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      items.forEach(function (item) {
+        item.classList.remove('is-open');
+        item.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

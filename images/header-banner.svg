@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice">
+  <rect width="1600" height="400" fill="#161513"/>
+  <g stroke="#7d7b76" stroke-width="1" opacity="0.35">
+    <line x1="-200" y1="500" x2="600" y2="-100"/>
+    <line x1="0" y1="500" x2="800" y2="-100"/>
+    <line x1="200" y1="500" x2="1000" y2="-100"/>
+    <line x1="400" y1="500" x2="1200" y2="-100"/>
+    <line x1="600" y1="500" x2="1400" y2="-100"/>
+    <line x1="800" y1="500" x2="1600" y2="-100"/>
+    <line x1="1000" y1="500" x2="1800" y2="-100"/>
+    <line x1="1200" y1="500" x2="2000" y2="-100"/>
+  </g>
+</svg>
