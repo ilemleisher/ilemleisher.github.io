@@ -11,58 +11,59 @@
 </head>
 <body class="research-page theme-green">
 
-<section class="page-banner compact-left">
-  <a href="index.html" class="home-link" aria-label="Back to home">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l4.88-4.88a1 1 0 10-1.42-1.42l-6.59 6.59a1 1 0 000 1.42l6.59 6.59a1 1 0 001.42-1.42L7.83 13H20a1 1 0 000-2z" fill="#ffffff"/></svg>
-  </a>
-  <h1 class="stacked-title">
+<div id="ls-intro-backdrop" class="ls-intro-backdrop"></div>
+
+<section class="page-banner compact-left ls-hero">
+  <h1 class="stacked-title animate-in">
     <span>The</span>
     <span>Large</span>
     <span>Scale</span>
   </h1>
-  <svg class="tree-graphic" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
-    <line x1="95.1" y1="30.3" x2="292.7" y2="33.4"/>
-    <line x1="131.9" y1="36.5" x2="292.7" y2="33.4"/>
-    <line x1="215.0" y1="69.4" x2="322.5" y2="73.2"/>
-    <line x1="58.0" y1="77.0" x2="322.5" y2="73.2"/>
-    <line x1="112.7" y1="46.3" x2="335.3" y2="51.4"/>
-    <line x1="23.6" y1="56.6" x2="335.3" y2="51.4"/>
-    <line x1="18.8" y1="21.2" x2="416.8" y2="27.3"/>
-    <line x1="292.7" y1="33.4" x2="416.8" y2="27.3"/>
-    <line x1="246.4" y1="91.0" x2="485.9" y2="82.1"/>
-    <line x1="322.5" y1="73.2" x2="485.9" y2="82.1"/>
-    <line x1="39.2" y1="8.6" x2="615.2" y2="17.9"/>
-    <line x1="416.8" y1="27.3" x2="615.2" y2="17.9"/>
-    <line x1="335.3" y1="51.4" x2="841.7" y2="66.8"/>
-    <line x1="485.9" y1="82.1" x2="841.7" y2="66.8"/>
-    <line x1="615.2" y1="17.9" x2="943.9" y2="42.4"/>
-    <line x1="841.7" y1="66.8" x2="943.9" y2="42.4"/>
-    <line x1="943.9" y1="42.4" x2="990.0" y2="42.4"/>
-    <circle cx="39.2" cy="8.6" r="2.0"/>
-    <circle cx="18.8" cy="21.2" r="2.0"/>
-    <circle cx="95.1" cy="30.3" r="2.0"/>
-    <circle cx="131.9" cy="36.5" r="2.0"/>
-    <circle cx="112.7" cy="46.3" r="2.0"/>
-    <circle cx="23.6" cy="56.6" r="2.0"/>
-    <circle cx="215.0" cy="69.4" r="2.0"/>
-    <circle cx="58.0" cy="77.0" r="2.0"/>
-    <circle cx="246.4" cy="91.0" r="2.0"/>
-    <circle cx="292.7" cy="33.4" r="3.6"/>
-    <circle cx="322.5" cy="73.2" r="3.6"/>
-    <circle cx="335.3" cy="51.4" r="3.6"/>
-    <circle cx="416.8" cy="27.3" r="4.43"/>
-    <circle cx="485.9" cy="82.1" r="4.43"/>
-    <circle cx="615.2" cy="17.9" r="5.09"/>
-    <circle cx="841.7" cy="66.8" r="5.68"/>
-    <circle cx="943.9" cy="42.4" r="7.57"/>
-    <circle cx="990.0" cy="42.4" r="7.57"/>
+  <svg class="tree-graphic" id="tree-graphic" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+    <line data-group="1" x1="95.1" y1="30.3" x2="292.7" y2="33.4"/>
+    <line data-group="1" x1="131.9" y1="36.5" x2="292.7" y2="33.4"/>
+    <line data-group="2" x1="215.0" y1="69.4" x2="322.5" y2="73.2"/>
+    <line data-group="2" x1="58.0" y1="77.0" x2="322.5" y2="73.2"/>
+    <line data-group="3" x1="112.7" y1="46.3" x2="335.3" y2="51.4"/>
+    <line data-group="3" x1="23.6" y1="56.6" x2="335.3" y2="51.4"/>
+    <line data-group="4" x1="18.8" y1="21.2" x2="416.8" y2="27.3"/>
+    <line data-group="4" x1="292.7" y1="33.4" x2="416.8" y2="27.3"/>
+    <line data-group="5" x1="246.4" y1="91.0" x2="485.9" y2="82.1"/>
+    <line data-group="5" x1="322.5" y1="73.2" x2="485.9" y2="82.1"/>
+    <line data-group="6" x1="39.2" y1="8.6" x2="615.2" y2="17.9"/>
+    <line data-group="6" x1="416.8" y1="27.3" x2="615.2" y2="17.9"/>
+    <line data-group="7" x1="335.3" y1="51.4" x2="841.7" y2="66.8"/>
+    <line data-group="7" x1="485.9" y1="82.1" x2="841.7" y2="66.8"/>
+    <line data-group="8" x1="615.2" y1="17.9" x2="943.9" y2="42.4"/>
+    <line data-group="8" x1="841.7" y1="66.8" x2="943.9" y2="42.4"/>
+    <line data-group="9" x1="943.9" y1="42.4" x2="990.0" y2="42.4"/>
+    <circle data-group="0" cx="39.2" cy="8.6" r="2.0"/>
+    <circle data-group="0" cx="18.8" cy="21.2" r="2.0"/>
+    <circle data-group="0" cx="95.1" cy="30.3" r="2.0"/>
+    <circle data-group="0" cx="131.9" cy="36.5" r="2.0"/>
+    <circle data-group="0" cx="112.7" cy="46.3" r="2.0"/>
+    <circle data-group="0" cx="23.6" cy="56.6" r="2.0"/>
+    <circle data-group="0" cx="215.0" cy="69.4" r="2.0"/>
+    <circle data-group="0" cx="58.0" cy="77.0" r="2.0"/>
+    <circle data-group="0" cx="246.4" cy="91.0" r="2.0"/>
+    <circle data-group="1" cx="292.7" cy="33.4" r="3.6"/>
+    <circle data-group="2" cx="322.5" cy="73.2" r="3.6"/>
+    <circle data-group="3" cx="335.3" cy="51.4" r="3.6"/>
+    <circle data-group="4" cx="416.8" cy="27.3" r="4.43"/>
+    <circle data-group="5" cx="485.9" cy="82.1" r="4.43"/>
+    <circle data-group="6" cx="615.2" cy="17.9" r="5.09"/>
+    <circle data-group="7" cx="841.7" cy="66.8" r="5.68"/>
+    <circle data-group="8" cx="943.9" cy="42.4" r="7.57"/>
+    <circle data-group="9" cx="990.0" cy="42.4" r="7.57"/>
   </svg>
 </section>
 
-<section class="research-intro">
+<div class="hero-questions" id="ls-hero-questions" aria-hidden="true">
   <p>How does dark matter imprint on galaxy formation and evolution? How are our observational methods of the Universe limited?</p>
   <p class="intro-note">What computational techniques can we use to probe these questions?</p>
-</section>
+</div>
+
+<div id="ls-content-wrap">
 
 <main class="wrap research-content wide-columns">
   <div class="research-columns">
@@ -117,11 +118,84 @@
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    &copy; 2026 Ilem Leisher
-  </div>
+<footer class="scale-footer">
+  <a href="index.html?intro=skip" class="footer-btn">Back Home</a>
+  <p class="footer-copy">&copy; 2026 Ilem Leisher</p>
+  <a href="small-scale.html" class="footer-btn">The Small Scale</a>
 </footer>
+
+</div>
+
+<script>
+(function () {
+  var backdrop = document.getElementById('ls-intro-backdrop');
+  var hero = document.querySelector('.page-banner.ls-hero');
+  var contentWrap = document.getElementById('ls-content-wrap');
+  var questions = document.getElementById('ls-hero-questions');
+  if (!backdrop || !hero || !contentWrap || !questions) return;
+
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+  document.body.style.overflow = 'hidden';
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var BUILD_MS = reduced ? 0 : 1800;
+  var STAGGER_MS = reduced ? 0 : 100;
+  var RISE_MS = reduced ? 0 : 800;
+
+  function proceed() {
+    backdrop.removeEventListener('click', proceed);
+    questions.classList.remove('is-visible');
+    hero.classList.add('is-docked');
+    setTimeout(function () {
+      contentWrap.classList.add('is-revealed');
+      setTimeout(function () {
+        hero.classList.remove('ls-hero', 'is-docked');
+        backdrop.remove();
+        questions.remove();
+        document.body.style.overflow = '';
+      }, RISE_MS + 50);
+    }, STAGGER_MS);
+  }
+
+  setTimeout(function () {
+    questions.setAttribute('aria-hidden', 'false');
+    void questions.offsetWidth;
+    questions.classList.add('is-visible');
+    if (reduced) {
+      proceed();
+    } else {
+      backdrop.addEventListener('click', proceed);
+    }
+  }, BUILD_MS);
+})();
+</script>
+
+<script>
+(function () {
+  var tree = document.getElementById('tree-graphic');
+  if (!tree) return;
+  var els = tree.querySelectorAll('[data-group]');
+  var maxGroup = 0;
+  els.forEach(function (el) {
+    maxGroup = Math.max(maxGroup, Number(el.dataset.group));
+  });
+
+  // Build the tree from the trunk outward to the leaves (reverse of merge order),
+  // with each step evenly spaced.
+  var STEP_MS = 130;
+  els.forEach(function (el) {
+    var g = Number(el.dataset.group);
+    var stepFromTrunk = maxGroup - g;
+    var delay = stepFromTrunk * STEP_MS;
+    el.style.animationDelay = delay + 'ms';
+  });
+
+  tree.classList.add('animate-in');
+})();
+</script>
 
 <script>
 (function () {
