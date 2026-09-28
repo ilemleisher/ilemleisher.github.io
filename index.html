@@ -6,7 +6,7 @@
 <title>Ilem Leisher</title>
 <meta name="description" content="Portfolio">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,30 +14,51 @@
 <header class="site-header">
   <div class="wrap">
     <img class="site-photo" src="images/profile.jpg" alt="Ilem Leisher">
-    <h1><a href="index.html">Ilem Leisher</a></h1>
+    <h1 class="site-name">
+      <a href="index.html" class="name-row">Ilem</a>
+      <a href="index.html" class="name-row">Leisher</a>
+    </h1>
+    <nav class="header-side-nav">
+      <a href="mailto:ilemleisher@gmail.com">ilemleisher@gmail.com</a>
+      <a href="index.html">LinkedIn</a>
+      <a href="index.html">GitHub</a>
+      <a href="index.html">ORCID</a>
+    </nav>
   </div>
 </header>
 
-<nav class="sub-nav">
+<section class="intro">
+  <div class="wrap">
+    <p class="muted tagline">Computational Researcher, Structure Enjoyer, Personal Growth Addict, Recovering Athlete</p>
+    <p>I'm Ilem Leisher (eye-lem lesher). I'm a computational research technician at the <a href="https://flavell.mit.edu/">Flavell Lab</a> at MIT, where I research <em>C. elegans</em> behavior using computational methods. This website is a portfolio of my professional work, personal work, experiences, and thoughts. If you're just looking for my research, click <a href="#science-either-end" class="jump-link" data-target="science-either-end">here</a>. If you want to know more about me, click <a href="#everything-in-between" class="jump-link" data-target="everything-in-between">here</a>.</p>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote>
+    <p>"To stand at either end, and to walk off that end of the pier only, hoping that out in that direction is the complete understanding, is a mistake. And to stand with evil and beauty and hope, or to stand with the fundamental laws, hoping that way to get a deep understanding of the whole world, with that aspect alone, is a mistake."</p>
+    <cite>— Richard Feynman</cite>
+  </blockquote>
+</section>
+
+<nav class="content-nav">
   <div class="nav-item">
-    <a href="index.html">The Small Scale</a>
+    <a href="index.html" id="science-either-end">Science at Either End</a>
     <ul class="dropdown">
-      <li><a href="index.html">Example — replace with a real link</a></li>
-      <li><a href="index.html">Example — replace with a real link</a></li>
+      <li><a href="small-scale.html">The Small Scale</a></li>
+      <li><a href="large-scale.html">The Large Scale</a></li>
     </ul>
   </div>
   <div class="nav-item">
-    <a href="index.html">Everything In Between</a>
+    <a href="index.html" id="everything-in-between">Everything in Between</a>
     <ul class="dropdown">
-      <li><a href="index.html">Example — replace with a real link</a></li>
-      <li><a href="index.html">Example — replace with a real link</a></li>
-    </ul>
-  </div>
-  <div class="nav-item">
-    <a href="index.html">The Large Scale</a>
-    <ul class="dropdown">
-      <li><a href="index.html">Example — replace with a real link</a></li>
-      <li><a href="index.html">Example — replace with a real link</a></li>
+      <li><a href="index.html">Philosophy of Life</a></li>
+      <li><a href="outdoors.html">Outdoors</a></li>
+      <li><a href="index.html">Travel</a></li>
+      <li><a href="index.html">Athletics</a></li>
+      <li><a href="index.html">Russian</a></li>
+      <li><a href="index.html">Magic: the Gathering</a></li>
+      <li><a href="index.html">Music</a></li>
     </ul>
   </div>
 </nav>
@@ -50,7 +71,7 @@
 
 <script>
 (function () {
-  var items = document.querySelectorAll('.sub-nav .nav-item');
+  var items = document.querySelectorAll('.content-nav .nav-item');
   items.forEach(function (item) {
     var trigger = item.querySelector(':scope > a');
     trigger.setAttribute('aria-haspopup', 'true');
@@ -69,7 +90,7 @@
     });
   });
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('.sub-nav')) {
+    if (!e.target.closest('.content-nav')) {
       items.forEach(function (item) {
         item.classList.remove('is-open');
         item.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
@@ -83,6 +104,22 @@
         item.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
       });
     }
+  });
+
+  document.querySelectorAll('.jump-link').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = document.getElementById(link.dataset.target);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target.classList.remove('flash-highlight');
+      void target.offsetWidth;
+      target.classList.add('flash-highlight');
+      target.addEventListener('animationend', function handler() {
+        target.classList.remove('flash-highlight');
+        target.removeEventListener('animationend', handler);
+      });
+    });
   });
 })();
 </script>
